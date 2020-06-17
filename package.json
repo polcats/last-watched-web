@@ -1,0 +1,25 @@
+{
+    "name": "lastwatched",
+    "version": "1.0.0",
+    "description": "",
+    "main": "middleware/app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/polcats/LastWatched.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/polcats/LastWatched/issues"
+    },
+    "homepage": "https://github.com/polcats/LastWatched#readme",
+    "dependencies": {
+        "ejs": "^3.0.1",
+        "express": "^4.17.1",
+        "express-session": "^1.17.0",
+        "mongodb": "^3.5.3"
+    }
+}
