@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="has-background-info">
+    <head>
+        <head>
+            <title>Last Watched! - Home</title>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <script src="resources/jquery-3.4.1.min.js"></script>
+            <link rel="shortcut icon" href="resources/images/favicon.ico" />
+            <link rel="stylesheet" href="resources/bulma.css" />
+            <link rel="stylesheet" href="resources/show-cards.css" />
+            <script src="https://kit.fontawesome.com/6f37713d68.js" crossorigin="anonymous"></script>
+        </head>
+    </head>
+    <body>
+        <div class="hero-head">
+            <header class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item">
+                            <img src="resources/images/logo-home.png" title="LastWatched!" alt="Logo" />
+                        </a>
+                        <span id="navbar-burger" class="navbar-burger burger" data-target="navbar-menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbar-menu" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a class="navbar-item">
+                                <span class="icon">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                                <span id="username">User</span>
+                            </a>
+                            <span class="navbar-item">
+                                <a class="button is-success" id="button-logout">
+                                    <span class="icon">
+                                        <i class="fa fa-sign-out-alt"></i>
+                                    </span>
+                                    <span>Logout</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <section class="section">
+            <div class="container">
+                <div id="show-add-button">
+                    <span class="icon is-small">
+                        <button class="button is-success" id="show-add" title="New Show">
+                            <i class="fas fa-plus fa-xs"></i>
+                        </button>
+                    </span>
+                </div>
+                <div class="box rows">
+                    <div id="show-tabs" class="tabs is-boxed row is-centered">
+                        <ul>
+                            <li class="show-tab is-active">
+                                <a>
+                                    <span class="icon"><i class="fas fa-play" aria-hidden="true"></i></span>
+                                    <span class="show-tab-label">Ongoing</span>
+                                </a>
+                            </li>
+                            <li class="show-tab">
+                                <a>
+                                    <span class="icon"><i class="fas fa-pause" aria-hidden="true"></i></span>
+                                    <span class="show-tab-label">On Hold</span>
+                                </a>
+                            </li>
+                            <li class="show-tab">
+                                <a>
+                                    <span class="icon"><i class="fas fa-check" aria-hidden="true"></i></span>
+                                    <span class="show-tab-label">Finished</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row show-list ongoing-list columns is-multiline is-mobile"></div>
+                    <div class="row show-list onhold-list is-hidden columns is-multiline is-mobile"></div>
+                    <div class="row show-list finished-list is-hidden columns is-multiline is-mobile">&nbsp;</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal">
+            <form id="add_show">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title" id="action_title"></p>
+                        <button class="delete" id="close-show-modal" aria-label="close" type="reset" title="Close"></button>
+                    </header>
+                    <section class="modal-card-body">
+                        <div class="field">
+                            <p class="help" id="add-show-help"></p>
+                        </div>
+                        <div class="field">
+                            <label for="" class="label">Title</label>
+                            <div class="control has-icons-left">
+                                <input id="show_name" name="name" type="text" value="" placeholder="Show Title" class="input" required />
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-video"></i>
+                                </span>
+                                <p class="help" id="show-name-help"></p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="" class="label">Last Watched Episode</label>
+                            <div class="control has-icons-left">
+                                <input id="show_episode" name="episode" type="number" value="1" class="input" min="1" max="9999" step="1" required />
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-play"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Status</label>
+                            <div class="control">
+                                <label class="radio">
+                                    <input id="show_status_ongoing" type="radio" name="status" value="ongoing" />
+                                    Ongoing
+                                </label>
+                                <label class="radio">
+                                    <input id="show_status_on_hold" type="radio" name="status" value="onhold" />
+                                    On Hold
+                                </label>
+                                <label class="radio">
+                                    <input id="show_status_finished" type="radio" name="status" value="finished" />
+                                    Finished
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+                    <footer class="modal-card-foot">
+                        <div class="container">
+                            <div class="columns">
+                                <div class="column">
+                                    <button id="save-show" type="submit" class="button is-success">
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-save"></i>
+                                        </span>
+                                        <span>Save</span>
+                                    </button>
+                                    <button class="button" id="show-reset" type="reset">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </form>
+        </div>
+
+        <script src="resources/watchlist.js"></script>
+    </body>
+</html>

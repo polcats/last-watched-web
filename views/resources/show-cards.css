@@ -1,0 +1,99 @@
+.show-card {
+    grid-template-areas: "data controls";
+    display: grid;
+    grid-template-columns: 175px 1fr;
+    width: 200px;
+    height: 100px;
+}
+
+.show-data {
+    text-align: center;
+    grid-area: data;
+    grid-template-areas: "show-title" "show-lastwatched";
+    display: grid;
+    grid-template-rows: 76px 1fr;
+    margin-right: 2px;
+}
+
+.show-title {
+    color: #fff;
+    grid-area: show-title;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.show-title .show-text {
+    font-size: 14px;
+}
+
+.show-text {
+    text-align: center;
+    width: 100%;
+}
+
+.show-lastwatched {
+    background: #e5e5e5;
+    grid-area: show-lastwatched;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.show-controls {
+    text-align: center;
+    grid-area: controls;
+    height: 100%;
+}
+
+.show-episode-current {
+    background: #fff;
+    font-size: 20px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+}
+
+.show-episode-decrement,
+.show-episode-increment {
+    cursor: pointer;
+    color: #fff;
+}
+
+.edit-icon {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+}
+
+.delete-icon {
+    position: absolute;
+    left: 25px;
+    top: 5px;
+    cursor: pointer;
+}
+
+#show-add-button {
+    padding: 5px;
+    position: absolute;
+    top: 2px;
+    right: 10px;
+}
+
+#show-add {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.show-list {
+    min-height: 200px;
+    padding: 20px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 500px) {
+    .show-tab .show-tab-label {
+        display: none;
+    }
+}

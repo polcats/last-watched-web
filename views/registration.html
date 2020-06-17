@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Last Watched! - Register</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="resources/jquery-3.4.1.min.js"></script>
+        <link rel="shortcut icon" href="resources/images/favicon.ico" />
+        <script src="resources/registration-validation.js"></script>
+        <script src="https://kit.fontawesome.com/6f37713d68.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="resources/bulma.css" />
+    </head>
+    <body>
+        <section class="hero is-info is-fullheight">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns is-centered">
+                        <div class="column is-5-tablet is-4-desktop is-3-widescreen has-text-centered">
+                            <img src="resources/images/logo-small-inverted.png" />
+                            <h1 class="title header is-size-1 has-text-centered">Register</h1>
+                            <form id="registration" action="/register" method="post" class="box">
+                                <p class="help" id="register-help"></p>
+                                <div class="field">
+                                    <label for="" class="label">Username</label>
+                                    <div class="control has-icons-left">
+                                        <input id="username" name="username" type="username" placeholder="" class="input" required />
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                        <p class="help" id="username-help"></p>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label for="" class="label">Email</label>
+                                    <div class="control has-icons-left">
+                                        <input id="email" name="email" type="email" placeholder="e.g. username@gmail.com" class="input" required />
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                        <p class="help" id="email-help"></p>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label for="" class="label">Password</label>
+                                    <div class="control has-icons-left">
+                                        <input id="password1" name="password" type="password" placeholder="*******" class="input" required />
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-lock"></i>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label for="" class="label">Confirm Password</label>
+                                    <div class="control has-icons-left">
+                                        <input id="password2" type="password" placeholder="*******" class="input" required />
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-lock"></i>
+                                        </span>
+                                        <p class="help" id="pass-help"></p>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <a class="button is-success" id="button-register">
+                                        <span class="icon">
+                                            <i class="fa fa-user-plus"></i>
+                                        </span>
+                                        <span>Register</span>
+                                    </a>
+                                    <div class="is-small has-text-right">
+                                        <a target="_top" href="/login">Log In</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

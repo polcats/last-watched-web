@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Last Watched! - Registration Sucessful</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="resources/jquery-3.4.1.min.js"></script>
+        <link rel="shortcut icon" href="resources/images/favicon.ico" />
+        <script src="https://kit.fontawesome.com/6f37713d68.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="resources/bulma.css" />
+    </head>
+    <body>
+        <section class="hero is-info is-fullheight">
+            <div class="hero-body">
+                <div class="container">
+                    <article class="message is-success">
+                        <div class="message-header">
+                            <p>Congratulations!</p>
+                        </div>
+                        <div class="message-body">
+                            You have successfully registered. <br />
+                            You will be automatically redirected to the <a href="/login">Login</a> page in a few seconds...
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <script type="text/javascript">
+            const timeoutSeconds = 5000;
+            setTimeout(function() {
+                window.location.replace("/");
+            }, timeoutSeconds);
+        </script>
+    </body>
+</html>

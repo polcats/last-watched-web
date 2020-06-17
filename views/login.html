@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Last Watched! - Welcome!</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="resources/jquery-3.4.1.min.js"></script>
+        <link rel="shortcut icon" href="resources/images/favicon.ico" />
+        <script src="https://kit.fontawesome.com/6f37713d68.js" crossorigin="anonymous"></script>
+        <script src="resources/login.js"></script>
+        <link rel="stylesheet" href="resources/bulma.css" />
+    </head>
+    <body>
+        <section class="hero is-info is-fullheight">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns is-centered">
+                        <div class="column is-5-tablet is-4-desktop is-3-widescreen has-text-centered">
+                            <img src="resources/images/logo-small-inverted.png" />
+                            <h1 class="title header is-size-1 has-text-centered">
+                                User Login
+                            </h1>
+                            <form class="box" id="login" methoid="post" action="/login" onsubmit="return Login(event)">
+                                <p class="help" id="login-help"></p>
+                                <div class="field">
+                                    <label for="" class="label">Email</label>
+                                    <div class="control has-icons-left">
+                                        <input name="email" type="email" placeholder="e.g. username@gmail.com" class="input" required />
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label for="" class="label">Password</label>
+                                    <div class="control has-icons-left">
+                                        <input name="password" type="password" placeholder="*******" class="input" required />
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="field has-text-centered">
+                                    <button class="button is-success" id="login_button">
+                                        <span class="icon">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                        </span>
+                                        <span>Login</span>
+                                    </button>
+                                    <div class="is-small has-text-right"><a target="_top" href="/register">Register</a></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
